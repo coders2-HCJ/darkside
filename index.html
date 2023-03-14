@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DarksIDE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/tabs/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tab-bar">
+<button class="tab" onclick="openTab(event, 'html-cont');">HTML</button>
+<button class="tab" onclick="openTab(event, 'css-cont');">CSS</button>
+<button class="tab" onclick="openTab(event, 'js-cont');">JS</button>
+<button class="tab" onclick="openTab(event, 'result-cont');">Result</button>
+<button class="tab" id="save">Save</button>
+</div>
+<div class="tab-content" id="html-cont"><div id="html"></div></div>
+<div class="tab-content" id="css-cont"><div id="css"></div></div>
+<div class="tab-content" id="js-cont"><div id="js"></div></div>
+<div class="tab-content" id="result-cont"><iframe id="result"></iframe></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.5/ace.js"></script>
+<script src="/tabs/script.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
