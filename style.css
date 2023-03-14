@@ -1,0 +1,11 @@
+#html, #css, #js, #result {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 93%;
+  border: none;
+}
+#result {
+  background-color: white;
+}
