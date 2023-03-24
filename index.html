@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body style="background-color: black;">
+    <audio id="tgp" loop><source src="https://o44j7l4g3.qnssl.com/ebab6b55-7dbd-4eeb-9151-0c1222cf9dc1.audio/mp3"></audio>
     <div class="tab-bar">
     <button class="tab" onclick="openTab(event, 'html-cont');">HTML</button>
     <button class="tab" onclick="openTab(event, 'css-cont');">CSS</button>
     <button class="tab" onclick="openTab(event, 'js-cont');">JS</button>
     <button class="tab" onclick="openTab(event, 'result-cont');">Result</button>
     <button class="tab" id="save">Save</button>
+    <button class="tab" onclick="document.getElementById('tgp').play();">Play BGM</button>
+    <button class="tab" onclick="document.getElementById('tgp').pause();">Stop BGM</button>
     </div>
     <div class="tab-content" id="html-cont"><div id="html"></div></div>
     <div class="tab-content" id="css-cont"><div id="css"></div></div>
