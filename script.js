@@ -24,7 +24,7 @@ for(var i = 0; i < 3; i++) {
   editors[i].session.setUseWorker(false);
   editors[i].session.setUseWrapMode(true);
   editors[i].setOption("enableEmmet", true);
-  editors[i].setValue(gqs()[editorTypes[i]]);
+  editors[i].setValue(gqs()[editorTypes[i]], 1);
   editors[i].session.on("change", showResult);
 }
 showResult();
@@ -38,4 +38,7 @@ document.getElementById("save").addEventListener("dblclick", function() {
     element.click();
     document.body.removeChild(element);
   }
+});
+document.getElementById("copy-link").addEventListener("click", function() {
+    navigator.clipboard.writeText("file:///Users/Alfred/Desktop/Vinsen/darkside/index.html?html=" + encodeURIComponent(editors[0].getValue()) + "&css=" + encodeURIComponent(editors[1].getValue()) + "&javascript=" + encodeURIComponent(editors[2].getValue()));
 });
