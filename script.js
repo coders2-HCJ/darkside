@@ -40,5 +40,5 @@ document.getElementById("save").addEventListener("dblclick", function() {
   }
 });
 document.getElementById("copy-link").addEventListener("click", function() {
-    navigator.clipboard.writeText("file:///Users/Alfred/Desktop/Vinsen/darkside/index.html?html=" + encodeURIComponent(editors[0].getValue()) + "&css=" + encodeURIComponent(editors[1].getValue()) + "&javascript=" + encodeURIComponent(editors[2].getValue()));
+    navigator.clipboard.writeText("https://coders2-hcj.github.io/darkside/index.html?html=" + encodeURIComponent(editors[0].getValue()) + "&css=" + encodeURIComponent(editors[1].getValue()) + "&javascript=" + encodeURIComponent(editors[2].getValue()));
 });
