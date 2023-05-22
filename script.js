@@ -1,4 +1,16 @@
 require("ace/ext/emmet");
+function openTab(event, id) {
+  var tabContents = document.getElementsByClassName("tab-content");
+  for(var i = 0; i < tabContents.length; i++) {
+    tabContents[i].style.display = "none";
+  }
+  var tabs = document.getElementsByClassName("tab");
+  for(var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+  document.getElementById(id).style.display = "block";
+  event.currentTarget.classList.add("active");
+}
 function gqs() {
   let qParams = {};
   let anchor = document.createElement("a");
@@ -31,7 +43,7 @@ document.getElementById("save").addEventListener("dblclick", function() {
   var title = prompt("Title:");
   if(title !== null) {
     var element = document.createElement("a");
-    element.href = "<!DOCTYPE html><html><head><title>" + title + "</title><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><style>" + editors[1].getValue() + "</style></head><body>" + editors[0].getValue() + "<script>" + editors[2].getValue() + "<" + "/script></body></html>);
+    element.href = "data:text/html;charset=utf-8," + encodeURIComponent("<!DOCTYPE html><html><head><title>" + title + "</title><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><style>" + editors[1].getValue() + "</style></head><body>" + editors[0].getValue() + "<script>" + editors[2].getValue() + "<" + "/script></body></html>");
     element.download = "program.html";
     document.body.appendChild(element);
     element.click();
