@@ -51,7 +51,8 @@ document.getElementById("save").addEventListener("dblclick", function() {
   }
 });
 document.getElementById("copy-link").addEventListener("click", function() {
-  navigator.clipboard.writeText("file:///Users/Alfred/Desktop/Vinsen/darkside/index.html?html=" + encodeURIComponent(editors[0].getValue()) + "&css=" + encodeURIComponent(editors[1].getValue()) + "&javascript=" + encodeURIComponent(editors[2].getValue()));  document.getElementById("copy-link").textContent = "Copied!";
+  navigator.clipboard.writeText("file:///Users/Alfred/Desktop/Vinsen/darkside/index.html?html=" + encodeURIComponent(editors[0].getValue()) + "&css=" + encodeURIComponent(editors[1].getValue()) + "&javascript=" + encodeURIComponent(editors[2].getValue()));
+  document.getElementById("copy-link").textContent = "Copied!";
   setTimeout(function() {
     document.getElementById("copy-link").textContent = "Copy Link";
   }, 2000);
